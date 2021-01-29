@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+  }
+  
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color:#d5d5d5;
+  }
+  
+.header {
+    text-align: left;
+    padding: 10px 0 20px 0;
+  }
+
+.header h1{
+    font-weight: 300;
+    font-size: 36px;
+  }
+
+.header h1 span{
+    font-weight: 600;
+  }
+
+.header p{
+    color: grey;
+    font-size: 24px;
+  }
+  
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+.row {
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+ 
+.column {
+    flex: 33.333%;
+    padding: 0 10px;
+  }
+  
+.column img {
+    margin-top: 0px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+.triangle {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.triangle img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+   }
+   
+.triangle.two {
+     width: 100%;
+     height: 400px;
+   }
+
+.triangle:hover span,.triangle:hover .info{
+     opacity: 1;
+   }
+   
+.triangle span{
+     position:absolute;
+     background:rgba(255,255,255,0.8);
+     width:100%;
+     height:100%;
+     clip-path: polygon(0% 100%, 100% 0%, 0% 0%);
+     left:0px;
+     top:0px;
+     transition: .5s ease;
+    opacity:0;
+   }
+
+.info{
+       position: absolute;
+       top: 20px;
+       left: 20px;
+       transition: .5s ease;
+       opacity:0;
+   }
+  
+.info p{
+    max-width: 170px;
+   }
+
+.footer {
+  padding:20px 0 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer a{
+    margin-right: 10px;
+  }
+
+.icon_footer a {
+  color: #333;
+}
+
+.icon_footer .social:hover {
+  transform: scale(0.9);
+
+}
+
+.icon_footer .social {
+  transform: scale(0.7);
+  transition: 0.4s ease;
+  
+}
+
+.icon_footer #social-fb:hover {
+  color: #3B5998;
+
+}
+
+.icon_footer #social-tw:hover {
+  color: #4099FF;
+}
+
+.icon_footer #social-inst:hover {
+  color: #d34836;
+}
+
+.icon_footer #social-em:hover {
+  color: #f39c12;
+}
+   
+ 
+   @media screen and (min-width: 1200px)
+   {
+     .container {
+     max-width: 1170px;
+   }
+   }
+
+   
+  @media screen and (max-width: 800px) {
+    .column {
+     
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+ 
+  @media screen and (max-width: 600px) {
+    .column {
+      
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
